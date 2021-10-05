@@ -36,6 +36,10 @@ class Index extends AbstractController
         $note->delete($noteId);
         Route::redirect();
     }
+    public function Edit(){
+
+    }
+
     public function update(){
         $view = new View('index_update');
         $view->render();
