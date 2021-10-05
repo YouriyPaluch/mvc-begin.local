@@ -31,15 +31,15 @@ class Index extends AbstractController
         $note->delete($noteId);
         Route::redirect();
     }
-    public function Edit(){
+    public function Update(){
         $noteId = $_REQUEST['id'];
         $noteText = $_REQUEST['note'];
         $note = new Note();
         $note->update($noteId, $noteText);
         Route::redirect();
     }
-    public function update(){
-        $view = new View('index_update');
+    public function Edit(){
+        $view = new View('index_edit');
         $view->render();
     }
 }
