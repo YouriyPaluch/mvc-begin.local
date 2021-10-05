@@ -17,7 +17,7 @@
             </form>
         </td>
         <td>
-            <form action="<?= Route::url('index', 'update')?>">
+            <form action="<?= Route::url('index', 'edit')?>">
                 <input type="hidden" name="id" value="<?=$note['id']?>">
                 <input type="hidden" name="text" value="<?=$note['text']?>">
                 <input type="submit" value="Update note">

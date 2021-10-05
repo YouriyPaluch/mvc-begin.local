@@ -1,4 +1,4 @@
-<form action="<?=Route::url('index', 'store')?>" method="post">
+<form action="<?=Route::url('index', 'update')?>" method="post">
     <label>Note
         <input type="text" name="note" value="<?=$_REQUEST['text']?>" autofocus>
     </label>

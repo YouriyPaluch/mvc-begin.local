@@ -20,14 +20,9 @@ class Index extends AbstractController
         $view->render();
     }
     public function store(){
-        $noteId = $_REQUEST['id'];
         $noteText = $_REQUEST['note'];
         $note = new Note();
-        if($noteId){
-            $note->update($noteId, $noteText);
-        } else{
-            $note->add($noteText);
-        }
+        $note->add($noteText);
         Route::redirect();
     }
     public function delete(){
@@ -37,9 +32,12 @@ class Index extends AbstractController
         Route::redirect();
     }
     public function Edit(){
-
+        $noteId = $_REQUEST['id'];
+        $noteText = $_REQUEST['note'];
+        $note = new Note();
+        $note->update($noteId, $noteText);
+        Route::redirect();
     }
-
     public function update(){
         $view = new View('index_update');
         $view->render();
